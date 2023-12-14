@@ -1,5 +1,6 @@
 import 'package:all_types_of_navigation_and_pass_data_flutter/screen/materialpagerote-navigation/MaterialPageRouteNavigation.dart';
 import 'package:all_types_of_navigation_and_pass_data_flutter/screen/materialpagerote-navigation/MaterialPageRouteNavigationWithDataFrom.dart';
+import 'package:all_types_of_navigation_and_pass_data_flutter/screen/materialpagerote-navigation/MaterialPageRouteNavigationWithModelClassFrom.dart';
 import 'package:all_types_of_navigation_and_pass_data_flutter/screen/rotes-navigation/RouteNavigationWithArgumentArray.dart';
 import 'package:flutter/material.dart';
 
@@ -140,6 +141,28 @@ class HomeScreenUSingRoute extends StatelessWidget {
                     padding: EdgeInsets.all(20),
                     child: Text(
                       "MaterialPageRouteNavigation - with DataArray",
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+             Container(
+              padding: EdgeInsets.only(top: 20),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              MaterialPageRouteNavigationWithModelClassFrom()));
+                },
+                child: Center(
+                  child: Container(
+                    color: Colors.pink,
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      "MaterialPageRouteNavigationWithModelClassFrom",
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),
